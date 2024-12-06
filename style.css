@@ -1,46 +1,35 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #e5e5e5;
-  margin: 0;
+#app-screen #app-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
 }
 
-#emulator {
-  width: 300px;
-  height: 500px;
-  background-color: #000;
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
+.playstore-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-#screen {
-  padding: 20px;
-  text-align: center;
+.playstore-app:hover {
+    background-color: #e0e0e0;
 }
 
-#controls {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+.playstore-app img {
+    width: 40px;
+    height: 40px;
 }
 
-button {
-  background-color: #008CBA;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #005f73;
+.playstore-app .install-button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
