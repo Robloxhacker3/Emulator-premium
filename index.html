@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UGPhone Emulator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Emulator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="emulator">
-    <div id="screen">
-      <h2>Welcome to UGPhone Emulator</h2>
-      <div id="call-status">Disconnected</div>
-      <button id="start-call">Start Call</button>
+    <div id="emulator">
+        <div id="phone-frame">
+            <div id="screen">
+                <div id="home-screen">
+                    <!-- Existing Apps -->
+                    <div class="app" onclick="openApp('PhoneApp')">
+                        <img src="phone-icon.png" alt="Phone">
+                        <p>Phone</p>
+                    </div>
+                    <div class="app" onclick="openApp('MessagesApp')">
+                        <img src="message-icon.png" alt="Messages">
+                        <p>Messages</p>
+                    </div>
+                    <div class="app" onclick="openApp('GalleryApp')">
+                        <img src="gallery-icon.png" alt="Gallery">
+                        <p>Gallery</p>
+                    </div>
+                    <!-- Play Store App -->
+                    <div class="app" onclick="openApp('PlayStoreApp')">
+                        <img src="playstore-icon.png" alt="Play Store">
+                        <p>Play Store</p>
+                    </div>
+                </div>
+                <div id="app-screen" class="hidden">
+                    <button class="back" onclick="goBack()">Back</button>
+                    <h2 id="app-title"></h2>
+                    <div id="app-content"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="controls">
-      <button id="end-call">End Call</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
